@@ -9,16 +9,18 @@
             font-family: 'Microsoft YaHei', sans-serif;
             margin: 0;
             padding: 20px;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: url('https://images.unsplash.com/photo-1519681393784-d120267933ba') no-repeat center center fixed;
+            background-size: cover;
             min-height: 100vh;
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
-            background: white;
+            background: rgba(255, 255, 255, 0.95);
             padding: 30px;
             border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
         }
         h1 {
             text-align: center;
@@ -65,11 +67,31 @@
             padding: 20px;
             border-radius: 10px;
             margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .result-card:hover {
+            transform: translateY(-2px);
         }
         .result-card h3 {
             color: #2c3e50;
             margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
+        .result-card p {
+            line-height: 1.6;
+            margin: 10px 0;
+            text-indent: 2em;
+        }
+        #result .result-card:nth-child(1) { background: linear-gradient(135deg, #fad0c4 0%, #ffd1ff 100%); }
+        #result .result-card:nth-child(2) { background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%); }
+        #result .result-card:nth-child(3) { background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%); }
+        #result .result-card:nth-child(4) { background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); }
+        #result .result-card:nth-child(5) { background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%); }
+        #result .result-card:nth-child(6) { background: linear-gradient(135deg, #a6c0fe 0%, #f68084 100%); }
+        #result .result-card:nth-child(7) { background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%); }
     </style>
 </head>
 <body>
