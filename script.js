@@ -30,6 +30,7 @@ function calculateFortune() {
     document.getElementById('career').textContent = '💼 ' + fortune.career;
     document.getElementById('recent').textContent = '📅 ' + fortune.recent;
     document.getElementById('advice').textContent = '💡 ' + fortune.advice;
+    document.getElementById('crystal').textContent = '💎 ' + getCrystalAdvice(zodiacSign);
 }
 
 function getZodiacSign(month, day) {
@@ -61,6 +62,24 @@ function calculateAscendantSign(birthDate) {
                   '天秤座', '天蝎座', '射手座', '摩羯座', '水瓶座', '双鱼座'];
     const index = Math.floor(hour / 2) % 12;
     return signs[index];
+}
+
+function getCrystalAdvice(zodiacSign) {
+    const crystalRecommendations = {
+        '摩羯座': '建议佩戴黑曜石或石榴石，可以增强意志力和责任心，帮助实现目标。',
+        '水瓶座': '推荐佩戴紫水晶或天河石，有助于开发创造力，增强直觉。',
+        '双鱼座': '适合佩戴月光石或海蓝宝，可以增强感知力，平衡情绪。',
+        '白羊座': '建议佩戴红玛瑙或钻石，可以增强勇气和领导力。',
+        '金牛座': '推荐佩戴绿松石或玫瑰石英，有助于稳定情绪，增进人缘。',
+        '双子座': '适合佩戴黄水晶或蓝玉髓，可以提升智慧和沟通能力。',
+        '巨蟹座': '建议佩戴珍珠或月光石，可以增强直觉，保护情感。',
+        '狮子座': '推荐佩戴太阳石或琥珀，有助于增强自信和魅力。',
+        '处女座': '适合佩戴碧玺或橄榄石，可以提升分析能力，减轻压力。',
+        '天秤座': '建议佩戴蓝宝石或青金石，有助于保持平衡和优雅。',
+        '天蝎座': '推荐佩戴黑玛瑙或红石榴石，可以增强意志力和洞察力。',
+        '射手座': '适合佩戴紫黄晶或青金石，有助于开阔视野，增进智慧。'
+    };
+    return crystalRecommendations[zodiacSign] || '根据您的星座特点，建议选择能量与您相匹配的晶石。';
 }
 
 function generateFortune(zodiacSign, ascendantSign, gender) {

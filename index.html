@@ -61,6 +61,15 @@
             z-index: 2;
             overflow-y: auto;
         }
+        .content-wrapper {
+            height: 100%;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+        .side-canvas {
+            background: transparent;
+            pointer-events: none;
+        }
         h1 {
             text-align: center;
             color: #2c3e50;
@@ -138,8 +147,9 @@
     <div class="layout-container">
         <div class="side-canvas" id="left-canvas"></div>
         <div class="container">
-        <h1>✨ 占星术算命 ✨</h1>
-        <div class="form-group">
+            <div class="content-wrapper">
+                <h1>✨ 占星术算命 ✨</h1>
+                <div class="form-group">
             <label for="name">姓名：</label>
             <input type="text" id="name" required>
         </div>
@@ -186,6 +196,11 @@
             <div class="result-card">
                 <h3>运势提升建议</h3>
                 <p id="advice"></p>
+            </div>
+            <div class="result-card">
+                <h3>水晶建议</h3>
+                <p id="crystal"></p>
+            </div>
             </div>
         </div>
         <div class="side-canvas" id="right-canvas"></div>
