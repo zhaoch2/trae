@@ -22,14 +22,14 @@ function calculateFortune() {
 
     // 显示结果
     document.getElementById('result').style.display = 'block';
-    document.getElementById('summary').textContent = fortune.summary;
-    document.getElementById('zodiac').textContent = fortune.zodiac;
-    document.getElementById('ascendant').textContent = fortune.ascendant;
-    document.getElementById('wealth').textContent = fortune.wealth;
-    document.getElementById('marriage').textContent = fortune.marriage;
-    document.getElementById('career').textContent = fortune.career;
-    document.getElementById('recent').textContent = fortune.recent;
-    document.getElementById('advice').textContent = fortune.advice;
+    document.getElementById('summary').textContent = '🌟 ' + fortune.summary;
+    document.getElementById('zodiac').textContent = '⭐ ' + fortune.zodiac;
+    document.getElementById('ascendant').textContent = '🌙 ' + fortune.ascendant;
+    document.getElementById('wealth').textContent = '💰 ' + fortune.wealth;
+    document.getElementById('marriage').textContent = '💑 ' + fortune.marriage;
+    document.getElementById('career').textContent = '💼 ' + fortune.career;
+    document.getElementById('recent').textContent = '📅 ' + fortune.recent;
+    document.getElementById('advice').textContent = '💡 ' + fortune.advice;
 }
 
 function getZodiacSign(month, day) {

@@ -1,152 +1,17 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>占星术算命</title>
-    <style>
-        body {
-            font-family: 'Microsoft YaHei', sans-serif;
-            margin: 0;
-            padding: 20px;
-            background: url('https://images.unsplash.com/photo-1519681393784-d120267933ba') no-repeat center center fixed;
-            background-size: cover;
-            min-height: 100vh;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(10px);
-        }
-        h1 {
-            text-align: center;
-            color: #2c3e50;
-            margin-bottom: 30px;
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-            color: #34495e;
-        }
-        input[type="text"],
-        input[type="date"],
-        select {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        button {
-            background: #3498db;
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 100%;
-            font-size: 16px;
-            transition: background 0.3s;
-        }
-        button:hover {
-            background: #2980b9;
-        }
-        #result {
-            margin-top: 30px;
-            display: none;
-        }
-        .result-card {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s;
-        }
-        .result-card:hover {
-            transform: translateY(-2px);
-        }
-        .result-card h3 {
-            color: #2c3e50;
-            margin-top: 0;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .result-card p {
-            line-height: 1.6;
-            margin: 10px 0;
-            text-indent: 2em;
-        }
-        #result .result-card:nth-child(1) { background: linear-gradient(135deg, #fad0c4 0%, #ffd1ff 100%); }
-        #result .result-card:nth-child(2) { background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%); }
-        #result .result-card:nth-child(3) { background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%); }
-        #result .result-card:nth-child(4) { background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); }
-        #result .result-card:nth-child(5) { background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%); }
-        #result .result-card:nth-child(6) { background: linear-gradient(135deg, #a6c0fe 0%, #f68084 100%); }
-        #result .result-card:nth-child(7) { background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%); }
-    </style>
+  <meta charset="utf-8">
+  <title>P5.js Sketch</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>✨ 占星术算命 ✨</h1>
-        <div class="form-group">
-            <label for="name">姓名：</label>
-            <input type="text" id="name" required>
-        </div>
-        <div class="form-group">
-            <label for="gender">性别：</label>
-            <select id="gender" required>
-                <option value="">请选择</option>
-                <option value="male">男</option>
-                <option value="female">女</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="birthdate">出生日期：</label>
-            <input type="date" id="birthdate" required>
-        </div>
-        <button onclick="calculateFortune()">开始算命</button>
-
-        <div id="result">
-            <div class="result-card">
-                <h3>运势总结</h3>
-                <p id="summary"></p>
-            </div>
-            <div class="result-card">
-                <h3>星座分析</h3>
-                <p id="zodiac"></p>
-                <p id="ascendant"></p>
-            </div>
-            <div class="result-card">
-                <h3>财运分析</h3>
-                <p id="wealth"></p>
-            </div>
-            <div class="result-card">
-                <h3>婚姻分析</h3>
-                <p id="marriage"></p>
-            </div>
-            <div class="result-card">
-                <h3>事业分析</h3>
-                <p id="career"></p>
-            </div>
-            <div class="result-card">
-                <h3>近期运势</h3>
-                <p id="recent"></p>
-            </div>
-            <div class="result-card">
-                <h3>运势提升建议</h3>
-                <p id="advice"></p>
-            </div>
-        </div>
-    </div>
-    <script src="script.js"></script>
+  <script src="mySketch.js"></script>
 </body>
 </html>
